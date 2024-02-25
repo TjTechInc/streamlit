@@ -58,12 +58,12 @@ else:
 category_df = filtered_df.groupby(by=["Area"], as_index=False)["US Value"].sum()
 
 with col:
-    st.subheader("Category wise Sales")
+    st.subheader(" Area Sales")
     fig = px.bar(category_df, x="Area", y="US Value", text=['${:,.2f}'.format(x) for x in category_df["US Value"]],
                  template="seaborn")
     st.plotly_chart(fig, use_container_width=True)
 with col1:
-    st.subheader("Region wise Sales")
+    st.subheader("Province  Sales")
     fig = px.pie(filtered_df, values="US Value", names="Area", hole=0.5)
-    fig.update_traces(text=filtered_df["Area"], textposition="outside")
+    fig.update_traces(text=filtered_df["Province"], textposition="outside")
     st.plotly_chart(fig, use_container_width=True,)
