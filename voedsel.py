@@ -17,7 +17,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_csv(filename, encoding="ISO-8859-1")
 else:
-    os.chdir(r"C:\Users\TjTech\OneDrive\Documents\GitHub\streamlit")
+    os.chdir(r"")
     df = pd.read_csv("tobacco_sales.csv", encoding="ISO-8859-1")
 
 col, col1 = st.columns(2)
