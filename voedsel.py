@@ -17,7 +17,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_csv(filename, encoding="ISO-8859-1")
 else:
-    os.chdir(r"")
+    os.chdir(r"/mount/src/streamlit/")
     df = pd.read_csv("tobacco_sales.csv", encoding="ISO-8859-1")
 
 col, col1 = st.columns(2)
